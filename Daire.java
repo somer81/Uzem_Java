@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package altustsinif;
+package altustsiniftest;
 
 /**
  *
@@ -11,47 +11,27 @@ package altustsinif;
  */
 public class Daire extends Nokta{
     
-    private double yc;
+    private double r;
     
     public Daire(){}
-    
-    public Daire(int xDeger,int yDeger, double yaricap)
+    public Daire(int x, int y, double r)
     {
-       
-        super(xDeger,yDeger);
-        // x = xDeger;
-       // y = yDeger; 
-        setYC(yaricap);
-        
-    }
-    
-    public void setYC(double yc)
-    {
-       this.yc = (yc<0.0)? 0.0 : yc;
-    }
-    
-    public double getYC()
-    {
-      return yc;
-    }
-    
-    public double Cap()
-    {
-       return 2 * getYC();
-    }
-    
-   public double Cevre()
-   {
-      return Math.PI * Cap(); 
+       super(x,y); 
+       setR(r) ;  
    }
-   
-   public double Alan()
-   {
-       return Math.PI * yc * yc;
-   }
-   
-   public String toString()
-   {
-      return super.toString() + " yarıçap : " + getYC();
-   }
+    
+    public void setR(double d)
+    {
+       this.r = d;
+    }
+    
+    public double getR()
+    {
+       return this.r;
+    }
+    
+    public String toString()
+    {
+        return super.toString() + " r : " + getR();
+    }
 }

@@ -3,46 +3,44 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package altustsinif;
+package altustsiniftest;
 
 /**
  *
  * @author Lenovo
  */
-public class Nokta {
+public class Nokta extends Object{
+    private int x; 
+    private int y; 
     
-    private int x;
-    private int y;
-    
-    public Nokta(){}
-    public Nokta(int xDeger, int yDeger)
-     {
-        x = xDeger;
-        y = yDeger;
-     }
+    Nokta(){}
+    Nokta(int x, int y)
+    {
+       setX(x);
+       setY(y);
+    }
     
     public int getX()
-      {
-         return x;
-      }
-    public void setX(int xDeger)
-      {
-          x = xDeger;
-      }
-    public int getY()
-      {
-         return y;
-      }
-    public void setY(int yDeger)
-      {
-         y = yDeger;
-      }
+    {
+       return this.x;
+    }
+    public void setX(int x)
+    {
+       this.x = x; 
+    }
+     public int getY()
+    {
+       return this.y;
+    }
+    public void setY(int y)
+    {
+       this.y = y; 
+    }
     
     public String toString()
     {
-     return "x: " + getX() + ", y: " + getY() ;   
+       return "[x: " + getX() + " y: " + getY() + "]" ; 
     }
     
     
 }
-
