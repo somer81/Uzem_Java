@@ -3,47 +3,51 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package calisantest;
+package calisanabstracttest;
 
 /**
  *
  * @author Lenovo
  */
-public class Calisan {
+public abstract class Calisan {
     
     private String ad;
-    private String soyad; 
-    public static int calisanSayisi; 
+    private String soyad;
+    private String SGN;
     
-    public Calisan(String ad, String soyad)
+    public Calisan(String ad,String soy, String sgk)
     {
-        
-       ++calisanSayisi;        
-       this.ad = ad ;
-       this.soyad = soyad;
-       
-         System.out.println("Ad " + this.ad + " Soyad : " + this.soyad + " Eklendi. Çalışan Sayısı : " + String.valueOf(calisanSayisi));
+      this.ad = ad ; 
+      soyad = soy ; 
+      SGN = sgk; 
     }
+            
+      public void setAd(String ad)
+      { 
+         this.ad = ad; 
+      }
     
-    public void finalize()
-    {
-       --calisanSayisi;
-       System.out.println("Ad " + this.ad + " Soyad : " + this.soyad + " Silindi. Çalışan Sayısı : " + String.valueOf(calisanSayisi));
-    }
+      public String getAd() {return ad;}
+      
+       public void setSoyad(String soy)
+      { 
+         this.soyad = soy; 
+      }
     
-    public String Ad() 
-            {
-              return this.ad; 
-            }
-    public String Soyad() 
-            {
-              return this.soyad; 
-            }
-    public static int CalisanSayisi() 
-            {
-              return calisanSayisi; 
-            }
+      public String getSoyad() {return soyad;}
+      
+       public void setSGN(String sgk)
+      { 
+         this.SGN = sgk; 
+      }
     
-    
-    
+      public String getSGN() {return SGN;}
+      
+      public String toString()
+      {
+         return getAd() + " " + getSoyad() + "\n SGN : " + getSGN();
+         
+      }
+      
+      public abstract double maas();
 }
